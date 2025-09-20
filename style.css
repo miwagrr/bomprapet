@@ -14,7 +14,6 @@ main {
     flex-grow: 1;
 }
 
-/* --- Cabeçalho --- */
 .cabecalho-container {
     display: flex;
     justify-content: flex-start;
@@ -46,7 +45,6 @@ main {
     color: white;
 }
 
-/* --- Seção Principal --- */
 .secao-principal {
     position: relative;
     height: 70vh;
@@ -93,7 +91,6 @@ main {
     margin: 0;
 }
 
-/* --- Formulário Principal --- */
 .formulario-container {
     position: relative;
     z-index: 1;
@@ -152,7 +149,6 @@ main {
     background-color: #3b947e;
 }
 
-/* --- Seção de Localização --- */
 .icone-container-grande {
     display: flex;
     justify-content: center;
@@ -194,9 +190,12 @@ main {
     display: flex;
     align-items: center;
     gap: 20px;
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.localizacao-conteudo.hidden {
     opacity: 0;
     transform: translateY(50px);
-    transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
 .localizacao-conteudo.is-visible {
@@ -204,17 +203,15 @@ main {
     transform: translateY(0);
 }
 
-/* --- Rodapé --- */
 footer {
     text-align: center;
     padding: 20px 0;
     background-color: #4ab597;
     color: white;
-    position: relative;
     margin-top: 100px;
 }
 
-/* --- Seção de Contato --- */
+/* Estilos para a Seção de Contato */
 .secao-contato {
     display: flex;
     flex-direction: column;
@@ -282,7 +279,7 @@ footer {
     background-color: #3b947e;
 }
 
-/* --- Seção de Galeria --- */
+/* Estilos para a Seção de Galeria */
 .secao-galeria {
     text-align: center;
     padding: 50px 20px;
@@ -328,7 +325,7 @@ footer {
     display: block;
 }
 
-/* --- Responsividade --- */
+/* Media Queries para responsividade */
 @media (max-width: 768px) {
     .cabecalho-container {
         flex-direction: column;
