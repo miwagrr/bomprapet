@@ -199,6 +199,82 @@ footer {
     margin-top: 100px;
 }
 
+/* Estilos para a Seção de Contato */
+.secao-contato {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 20px;
+    background-color: #f9f9f9; /* Fundo cinza claro para destacar a seção */
+}
+
+.secao-contato h1 {
+    color: #4ab597; /* Cor principal do seu site */
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.secao-contato p {
+    color: #555;
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+/* Estilos para o Formulário de Contato */
+.secao-contato form {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px; /* Limita a largura máxima do formulário */
+}
+
+.secao-contato label {
+    display: block; /* Cada label em uma nova linha */
+    font-weight: bold;
+    margin-top: 15px;
+    color: #333;
+}
+
+.secao-contato input[type="text"],
+.secao-contato input[type="email"],
+.secao-contato textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 5px;
+    box-sizing: border-box; /* Garante que o padding não aumente a largura */
+}
+
+.secao-contato textarea {
+    resize: vertical; /* Permite que o usuário redimensione verticalmente */
+}
+
+.secao-contato input[type="submit"] {
+    background-color: #4ab597;
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.secao-contato input[type="submit"]:hover {
+    background-color: #3b947e;
+}
+
+/* Media Query para telas menores */
+@media (max-width: 768px) {
+    .secao-contato form {
+        padding: 20px;
+    }
+}
+
 /* Media Queries para responsividade */
 @media (max-width: 768px) {
 
