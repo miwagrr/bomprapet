@@ -40,3 +40,23 @@ if (document.getElementById('botao-enviar-contato')) {
     const botaoEnviar = document.getElementById('botao-enviar-contato');
     const nomeInput = document.getElementById('nome-contato');
     const emailInput = document.getElementById('email-contato');
+    const mensagemInput = document.getElementById('mensagem-contato');
+
+    botaoEnviar.addEventListener('click', function() {
+        const nome = nomeInput.value.trim();
+        const email = emailInput.value.trim();
+        const mensagem = mensagemInput.value.trim();
+        
+        if (nome === '' || email === '' || mensagem === '') {
+            alert('Por favor, preencha todos os campos do formulário.');
+            return;
+        }
+        
+        const numeroTelefone = '553285076303';
+        const mensagemCompleta = `Nova mensagem do site:\n\nNome: ${nome}\nE-mail: ${email}\n\nMensagem: ${mensagem}`;
+        const mensagemCodificada = encodeURIComponent(mensagemCompleta);
+        const urlWhatsApp = `https://web.whatsapp.com/send?phone=${numeroTelefone}&text=${mensagemCodificada}`;
+        
+        window.open(urlWhatsApp, '_blank');
+    });
+}
