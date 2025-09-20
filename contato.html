@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - Clínica Veterinária Bom pra Pet</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="cabecalho-container">
+    <div class="logo">
+        <a href="index.html">
+            <img src="logo.png" alt="Logo Clínica Veterinária Bom pra Pet" width="30px">
+        </a>
+    </div>
+    <nav class="menu-navegacao">
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="servicos.html">Serviços</a></li>
+            <li><a href="produtos.html">Produtos</a></li>
+            <li><a href="galeria.html">Galeria</a></li>
+            <li><a href="contato.html">Contato</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section class="secao-contato">
+        <h1>Entre em Contato!</h1>
+        <p>Preencha o formulário abaixo para nos enviar uma mensagem.</p>    
+        <form id="form-contato">
+            <label for="nome">Nome:</label><br>
+            <input type="text" id="nome-contato" name="nome" required><br><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email-contato" name="email" required><br><br>
+            <label for="mensagem">Mensagem:</label><br>
+            <textarea id="mensagem-contato" name="mensagem" rows="4" cols="50" required></textarea><br><br>
+            <button type="button" class="botao-formulario" id="botao-enviar-contato">Enviar</button>        </form>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2024 Clínica Veterinária Bom pra Pet. Todos os direitos reservados.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
