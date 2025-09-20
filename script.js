@@ -34,3 +34,31 @@ const observer = new IntersectionObserver(entries => {
 });
 
 observer.observe(localizacaoCard);
+
+// Funcionalidade do Formulário de Contato via WhatsApp
+const botaoEnviar = document.getElementById('botao-enviar-contato');
+
+botaoEnviar.addEventListener('click', function() {
+    const nome = document.getElementById('nome-contato').value.trim();
+    const email = document.getElementById('email-contato').value.trim();
+    const mensagem = document.getElementById('mensagem-contato').value.trim();
+
+    if (nome === '' || email === '' || mensagem === '') {
+        alert('Por favor, preencha todos os campos do formulário.');
+        return;
+    }
+
+    const numeroTelefone = '553285076303'; // Use o número de telefone da clínica
+    
+    // Constrói a mensagem completa com todas as informações
+    const mensagemCompleta = `Nova mensagem do site:\n\nNome: ${nome}\nE-mail: ${email}\n\nMensagem: ${mensagem}`;
+    
+    // Codifica a mensagem para a URL
+    const mensagemCodificada = encodeURIComponent(mensagemCompleta);
+    
+    // Monta o link para o WhatsApp Web
+    const urlWhatsApp = `https://web.whatsapp.com/send?phone=${numeroTelefone}&text=${mensagemCodificada}`;
+    
+    // Redireciona para o WhatsApp
+    window.open(urlWhatsApp, '_blank');
+});
